@@ -8,6 +8,7 @@ import os
 import json
 from dataset.Cifar100 import Cifar100Task
 from dataset.MNIST import MNISTTask
+from dataset.SVHN import SVHNTask
 
 trans_mnist = transforms.Compose([transforms.ToTensor(),
                                   transforms.Normalize((0.1307,), (0.3081,))])
@@ -52,6 +53,17 @@ def get_data(args):
         # dataset_train = datasets.CIFAR100('data/cifar100', train=True, download=True, transform=trans_cifar100_train)
         # dataset_test = datasets.CIFAR100('data/cifar100', train=False, download=True, transform=trans_cifar100_val)
         dataset_train,dataset_test = cifar100.getTaskDataSet()
+        # dict_users_train, rand_set_all = noniid(dataset_train, args.num_users, args.shard_per_user, args.num_classes)
+        # dict_users_test, rand_set_all = noniid(dataset_test, args.num_users, args.shard_per_user, args.num_classes,
+        #                                        rand_set_all=rand_set_all)
+        # for dataset_train,dataset_test in zip(dataset_trains,dataset_tests):
+        dict_users_train, rand_set_all = noniid(dataset_train[0], args.num_users, args.shard_per_user, args.num_classes)
+        dict_users_test, rand_set_all = noniid(dataset_test[0], args.num_users, args.shard_per_user, args.num_classes, rand_set_all=rand_set_all)
+    elif args.dataset == 'SVHN':
+        svhn = SVHNTask('../data/SVHN',task_num=5)
+        # dataset_train = datasets.CIFAR100('data/cifar100', train=True, download=True, transform=trans_cifar100_train)
+        # dataset_test = datasets.CIFAR100('data/cifar100', train=False, download=True, transform=trans_cifar100_val)
+        dataset_train,dataset_test = svhn.getTaskDataSet()
         # dict_users_train, rand_set_all = noniid(dataset_train, args.num_users, args.shard_per_user, args.num_classes)
         # dict_users_test, rand_set_all = noniid(dataset_test, args.num_users, args.shard_per_user, args.num_classes,
         #                                        rand_set_all=rand_set_all)

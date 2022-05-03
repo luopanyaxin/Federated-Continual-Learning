@@ -9,6 +9,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from torch.nn import Parameter
+from models.ResNet import resnet18
 from torchvision import models
 import json
 import numpy as np
@@ -401,5 +402,33 @@ class Cifar100WEIT(nn.Module):
             output[:, offset2:self.n_outputs].data.fill_(-10e10)
         return output
         # h = self.fc2(h)
+class RepTailResNet18(nn.Module):
+    def __init__(self,output=100,nc_per_task = 10):
+        super().__init__()
+
+        self.feature_net = resnet18()
+        self.last = torch.nn.Linear(self.feature_net.outlen, output)
+        self.weight_keys = []
+        for name,para in self.named_parameters():
+            temp=[]
+            if 'fc' not in name:
+                temp.append(name)
+                self.weight_keys.append(temp)
+    def forward(self,x,t,pre=False,is_con=False):
+        h = self.feature_net(x)
+        output = self.last(h)
+        if is_con:
+            # make sure we predict classes within the current task
+            if pre:
+                offset1 = 0
+                offset2 = int(t  * self.nc_per_task)
+            else:
+                offset1 = int(t * self.nc_per_task)
+                offset2 = int((t + 1) * self.nc_per_task)
+            if offset1 > 0:
+                output[:, :offset1].data.fill_(-10e10)
+            if offset2 < self.n_outputs:
+                output[:, offset2:self.n_outputs].data.fill_(-10e10)
+        return output
 # c = Cifar100WEIT([3,32,32])
 # l = []

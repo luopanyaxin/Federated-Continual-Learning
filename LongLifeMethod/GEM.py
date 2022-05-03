@@ -178,7 +178,7 @@ class Appr():
                                             self.is_cifar)
                 output = self.net(
                         self.memory_data[past_task],
-                        past_task,channel=1)[:, offset1: offset2]
+                        past_task)[:, offset1: offset2]
                 ptloss = self.ce(output,self.memory_labs[past_task] - offset1)
                 ptloss.backward()
                 store_grad(self.net.parameters, self.grads, self.grad_dims,
@@ -188,7 +188,7 @@ class Appr():
         self.net.zero_grad()
 
         offset1, offset2 = compute_offsets(t, self.nc_per_task, self.is_cifar)
-        loss = self.ce(self.net.forward(x, t,channel=1)[:, offset1: offset2], y - offset1)
+        loss = self.ce(self.net.forward(x, t)[:, offset1: offset2], y - offset1)
         loss.backward()
 
         # check if gradient violates constraints

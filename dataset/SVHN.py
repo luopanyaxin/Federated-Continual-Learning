@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import Dataset
-from torchvision import transforms, datasets
+from torchvision import transforms, datasets,models
 from PIL import Image
 import os
 import os.path
@@ -96,13 +96,13 @@ class mySVHN(datasets.SVHN):
                 basedataset.append(d)
 
 
-        self.task_datasets = [[{0:da[0],1:da[1]} for da in basedataset]]
+        self.task_datasets = [[{0:da[0].detach().clone(),1:da[1]} for da in basedataset]]
 
         for i,permutation in enumerate(permutations):
             datas = []
             for b in basedataset:
                 d = {}
-                d[0] = permutation_image(b[0],permutation)
+                d[0] = permutation_image(b[0].detach().clone(),permutation)
                 d[1] = b[1] + (i+1)*10
                 datas.append(d)
             self.task_datasets.append(datas)
@@ -122,7 +122,8 @@ def evaluate(model, data_loader, device):
     # 在进程0中打印验证进度
     for step, data in enumerate(data_loader):
         images, labels = data
-        pred = model(images.to(device),0)
+        images = images -10
+        pred = model(images.to(device))
         pred = torch.max(pred, dim=1)[1]
         sum_num += torch.eq(pred, labels.to(device)).sum()
 
@@ -131,23 +132,21 @@ def evaluate(model, data_loader, device):
 
     return acc
 
-# data = SVHNTask('../data/SVHN',task_num=5)
+# data = SVHNTask('../../data/SVHN',task_num=5)
 # train_dataset,test_dataset = data.getTaskDataSet()
-train_dataset = datasets.SVHN('../data/SVHN',split='train',download=False,transform=transforms.ToTensor())
-test_dataset = datasets.SVHN('../data/SVHN',split='test',transform=transforms.ToTensor())
-train_loader = torch.utils.data.DataLoader(train_dataset,
-                                           batch_size=128,
-                                           shuffle=True,
-                                           pin_memory=True,
-                                           num_workers=0)
-
-val_loader = torch.utils.data.DataLoader(test_dataset,
-                                         batch_size=64,
-                                         shuffle=False,
-                                         pin_memory=True,
-                                         num_workers=0)
-
-# net_glob = RepTail([3,32,32])
+# train_loader = torch.utils.data.DataLoader(train_dataset[0],
+#                                            batch_size=128,
+#                                            shuffle=True,
+#                                            pin_memory=True,
+#                                            num_workers=0)
+#
+# val_loader = torch.utils.data.DataLoader(test_dataset[1],
+#                                          batch_size=64,
+#                                          shuffle=False,
+#                                          pin_memory=True,
+#                                          num_workers=0)
+#
+# net_glob = models.resnet18()
 # net_glob.cuda()
 # opt = torch.optim.Adam(net_glob.parameters(), 0.001)
 # ce = torch.nn.CrossEntropyLoss()
@@ -157,7 +156,7 @@ val_loader = torch.utils.data.DataLoader(test_dataset,
 #     for x, y in train_loader:
 #         x = x.cuda()
 #         y = y.cuda()
-#         out = net_glob(x,0,is_cifar=False)
+#         out = net_glob(x)
 #         loss = ce(out, y)
 #         opt.zero_grad()
 #         loss.backward()
@@ -166,90 +165,4 @@ val_loader = torch.utils.data.DataLoader(test_dataset,
 #         acc = evaluate(net_glob, val_loader, 'cuda:0')
 #         print('The epochs:' + str(epoch) + '  the acc:' + str(acc))
 
-import torch
-import torchvision
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.utils.data as Data
-import matplotlib.pyplot as plt
 
-# define hyper parameters
-Batch_size = 50
-Lr = 0.01
-Epoch = 10
-
-train_dataset = torchvision.datasets.SVHN(
-    root='../data/SVHN',
-    split='train',
-    download=False,
-    transform=torchvision.transforms.ToTensor()
-)
-
-test_dataset = torchvision.datasets.SVHN(
-    root='../data/SVHN',
-    split='test',
-    download=False,
-    transform=torchvision.transforms.ToTensor()
-)
-
-# define train loader
-train_loader = Data.DataLoader(
-    dataset=train_dataset,
-    shuffle=True,
-    batch_size=Batch_size
-)
-
-# define test loader
-test_loader = Data.DataLoader(
-    dataset=test_dataset,
-    shuffle=True,
-    batch_size=Batch_size
-)
-
-
-# 取一个固定测试点作为测试数据
-# dataiter = iter(test_loader)
-# test_x, test_y = dataiter.next()
-
-# construct network
-
-ResNet18 = RepTail()
-# torchvision.models.resnet18(pretrained=False).cuda()
-# print(ResNet18)
-
-opt = torch.optim.SGD(ResNet18.parameters(), lr=Lr)
-loss_fun = nn.CrossEntropyLoss()
-a = []
-ac_list = []
-for epoch in range(Epoch):
-    for i, (x, y) in enumerate(train_loader):
-        x = x.cuda()
-        y = y.cuda()
-        output = ResNet18(x,t=0)
-
-        loss = loss_fun(output, y)
-        opt.zero_grad()
-        loss.backward()
-        opt.step()
-    acc = evaluate(ResNet18, test_loader, 'cuda:0')
-    print(acc)
-
-
-# print('real value', test_y[: 10].numpy())
-# print('train value', torch.max(ResNet18(test_x)[: 10], dim=1)[1].numpy())
-
-plt.plot(a, ac_list, color='r')
-plt.show()
-
-# d = {}
-# for i in range(10):
-#     d[i]=0
-# # for l in data.labels:
-#     d[l]+=1
-# for x,y in data:
-#     a=1
-# def main():
-#
-#
-# if __name__ == "__main__":
-#     main()
