@@ -11,7 +11,7 @@ from utils.train_utils import get_data, get_model, read_data
 from models.Update import LocalUpdate,DatasetSplit
 from models.test import test_img_local_all
 from LongLifeMethod.APFL import Appr,LongLifeTest,LongLifeTrain
-from models.Nets import RepTail
+from models.Nets import RepTailResNet18
 from torch.utils.data import DataLoader
 import time
 
@@ -21,34 +21,16 @@ if __name__ == '__main__':
     args.device = torch.device('cuda:{}'.format(args.gpu) if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
 
     lens = np.ones(args.num_users)
-    if 'cifar' in args.dataset or args.dataset == 'mnist' or 'miniimagenet' in args.dataset or 'FC100' in args.dataset:
+    if 'cifar' in args.dataset or args.dataset == 'mnist' or 'miniimagenet' in args.dataset or 'FC100' in args.dataset or 'SVHN' in args.dataset:
         dataset_train, dataset_test, dict_users_train, dict_users_test = get_data(args)
         for idx in dict_users_train.keys():
             np.random.shuffle(dict_users_train[idx])
-    else:
-        if 'femnist' in args.dataset:
-            train_path = './leaf-master/data/' + args.dataset + '/data/mytrain'
-            test_path = './leaf-master/data/' + args.dataset + '/data/mytest'
-        else:
-            train_path = './leaf-master/data/' + args.dataset + '/data/train'
-            test_path = './leaf-master/data/' + args.dataset + '/data/test'
-        clients, groups, dataset_train, dataset_test = read_data(train_path, test_path)
-        lens = []
-        for iii, c in enumerate(clients):
-            lens.append(len(dataset_train[c]['x']))
-        dict_users_train = list(dataset_train.keys())
-        dict_users_test = list(dataset_test.keys())
-        print(lens)
-        print(clients)
-        for c in dataset_train.keys():
-            dataset_train[c]['y'] = list(np.asarray(dataset_train[c]['y']).astype('int64'))
-            dataset_test[c]['y'] = list(np.asarray(dataset_test[c]['y']).astype('int64'))
 
     print(args.alg)
     write = SummaryWriter('./log/APFL' + args.dataset+'_'+'round' + str(args.round) + '_frac' + str(args.frac))
     # build model
     # net_glob = get_model(args)
-    net_glob = RepTail([1,28,28])
+    net_glob = RepTailResNet18()
     net_glob.train()
     if args.load_fed != 'n':
         fed_model_path = './save/' + args.load_fed + '.pt'

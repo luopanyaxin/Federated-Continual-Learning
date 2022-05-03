@@ -35,10 +35,10 @@ def args_parser():
     parser.add_argument('--max_pool', type=str, default='True',
                         help="Whether use max pooling rather than strided convolutions")
     parser.add_argument('--num_layers_keep', type=int, default=1, help='number layers to keep')
-    parser.add_argument('--alg', type=str, default='fedavg', help='FL algorithm to use')
+    parser.add_argument('--alg', type=str, default='fedrep', help='FL algorithm to use')
 
     # algorithm-specific hyperparameters
-    parser.add_argument('--local_rep_ep', type=int, default=4,
+    parser.add_argument('--local_rep_ep', type=int, default=2,
                         help="the number of local epochs for the representation for FedRep")
     parser.add_argument('--lr_g', type=float, default=0.1, help="global learning rate for SCAFFOLD")
     parser.add_argument('--mu', type=float, default='0.1', help='FedProx parameter mu')

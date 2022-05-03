@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38e95a73-85b7-4fd9-8db4-df3402219b8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/LongLifeMethod/GEM.py" beforeDir="false" afterPath="$PROJECT_DIR$/LongLifeMethod/GEM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/SVHN.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/SVHN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/APFLmnist_round15_frac0.4/events.out.tfevents.1651510085.DESKTOP-435G5UE.17036.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/Baseline_mnist_round15_frac0.4/events.out.tfevents.1651507158.DESKTOP-435G5UE.7440.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/Baseline_mnist_round15_frac0.4/events.out.tfevents.1651507762.DESKTOP-435G5UE.12428.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/FedRep_mnist_round15_frac0.4/events.out.tfevents.1651508273.DESKTOP-435G5UE.15688.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/GEMmnist_round15_frac0.4/events.out.tfevents.1651504756.DESKTOP-435G5UE.16744.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/WEITmnist_round15_frac0.4/events.out.tfevents.1651502416.DESKTOP-435G5UE.11376.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_GEM.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_GEM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_fedavg.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_fedavg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Nets.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Nets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/Baseline_SVHN_round15_frac0.4/events.out.tfevents.1651568900.DESKTOP-435G5UE.12956.0" beforeDir="false" afterPath="$PROJECT_DIR$/log/SVHN/Baseline_SVHN_round15_frac0.4/events.out.tfevents.1651568900.DESKTOP-435G5UE.12956.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/SVHN/GEMSVHN_round15_frac0.4/events.out.tfevents.1651565124.DESKTOP-435G5UE.2068.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/SVHN/GEMSVHN_round15_frac0.4/events.out.tfevents.1651565233.DESKTOP-435G5UE.7372.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-apfl.py" beforeDir="false" afterPath="$PROJECT_DIR$/main-apfl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-fedrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/main-fedrep.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/train_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/train_utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,22 +20,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LongLifeMethod/APFL.py">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+            <state relative-caret-position="1371">
+              <caret line="120" column="48" selection-start-line="120" selection-start-column="48" selection-end-line="120" selection-end-column="48" />
               <folding>
-                <element signature="e#187#199#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ResNet.py">
+        <entry file="file://$PROJECT_DIR$/main-apfl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="173" column="38" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
+            <state relative-caret-position="50">
+              <caret line="23" column="144" selection-start-line="23" selection-start-column="144" selection-end-line="23" selection-end-column="144" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +46,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/options.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="58" />
+            <state relative-caret-position="400">
+              <caret line="40" column="62" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main-fedrep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="50">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -67,8 +77,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/save/cifar-json/run-cifar100_APFLcifar100_round15_frac0.4-tag-task_finish_and _agg.json">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Experiment/cifar100.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Experiment/FC100.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Experiment/MNIST.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -83,44 +103,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_GEM.py">
+        <entry file="file://$PROJECT_DIR$/models/Nets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+            <state relative-caret-position="-252">
+              <caret line="405" column="8" selection-start-line="405" selection-start-column="8" selection-end-line="405" selection-end-column="8" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.conda/envs/taobao/Lib/site-packages/torch/nn/modules/conv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="398" selection-start-line="398" selection-end-line="398" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LongLifeMethod/GEM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="115" column="28" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="28" />
-              <folding>
-                <element signature="e#187#199#0" expanded="true" />
+                <element signature="e#185#197#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,9 +157,7 @@
         <option value="$PROJECT_DIR$/save/Baseline.py" />
         <option value="$PROJECT_DIR$/LongLifeMethod/Baseline.py" />
         <option value="$PROJECT_DIR$/LongLifeMethod/FedRep.py" />
-        <option value="$PROJECT_DIR$/main-fedrep.py" />
         <option value="$PROJECT_DIR$/LongLifeMethod/APFL.py" />
-        <option value="$PROJECT_DIR$/main-apfl.py" />
         <option value="$PROJECT_DIR$/LongLifeMethod/GEM.py" />
         <option value="$PROJECT_DIR$/save/GEM.py" />
         <option value="$PROJECT_DIR$/utils/train_utils.py" />
@@ -178,10 +165,12 @@
         <option value="$PROJECT_DIR$/models/Nets.py" />
         <option value="$PROJECT_DIR$/main_GEM.py" />
         <option value="$PROJECT_DIR$/models/ResNet.py" />
-        <option value="$PROJECT_DIR$/utils/options.py" />
         <option value="$PROJECT_DIR$/main_fedavg.py" />
-        <option value="$PROJECT_DIR$/draw_image.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/main-apfl.py" />
+        <option value="$PROJECT_DIR$/utils/options.py" />
+        <option value="$PROJECT_DIR$/main-fedrep.py" />
+        <option value="$PROJECT_DIR$/draw_image.py" />
       </list>
     </option>
   </component>
@@ -203,6 +192,16 @@
             <path>
               <item name="WEIT-torch" type="b2602c69:ProjectViewProjectNode" />
               <item name="WEIT-torch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEIT-torch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WEIT-torch" type="462c0819:PsiDirectoryNode" />
+              <item name="Experiment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEIT-torch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WEIT-torch" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WEIT-torch" type="b2602c69:ProjectViewProjectNode" />
@@ -230,6 +229,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\WEIT-torch\log\SVHN" />
       <recent name="C:\Users\Administrator\Desktop\WEIT-torch\save\mnist" />
     </key>
   </component>
@@ -246,28 +246,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.draw_image">
-    <configuration name="SVHN" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="WEIT-torch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataset" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataset/SVHN.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="draw_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="WEIT-torch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,6 +282,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main-apfl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main-fedrep" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WEIT-torch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main-fedrep.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -359,10 +359,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.draw_image" />
+        <item itemvalue="Python.main-fedrep" />
+        <item itemvalue="Python.main-apfl" />
         <item itemvalue="Python.main_fedavg" />
         <item itemvalue="Python.main_GEM" />
-        <item itemvalue="Python.SVHN" />
-        <item itemvalue="Python.main-apfl" />
       </list>
     </recent_temporary>
   </component>
@@ -378,12 +378,12 @@
       <updated>1648694187714</updated>
       <workItem from="1648694188887" duration="1253000" />
       <workItem from="1651222307343" duration="4900000" />
-      <workItem from="1651471812574" duration="38677000" />
+      <workItem from="1651471812574" duration="42016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44830000" />
+    <option name="totallyTimeSpent" value="48169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -395,7 +395,7 @@
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.324295" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3253796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -469,15 +469,15 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WEIT_torch$Cifar100.coverage" NAME="Cifar100 Coverage Results" MODIFIED="1651486739472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset" />
-    <SUITE FILE_PATH="coverage/WEIT_torch$main_apfl.coverage" NAME="main-apfl Coverage Results" MODIFIED="1651510071890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEIT_torch$SVHN.coverage" NAME="SVHN Coverage Results" MODIFIED="1651563654396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset" />
+    <SUITE FILE_PATH="coverage/WEIT_torch$main_apfl.coverage" NAME="main-apfl Coverage Results" MODIFIED="1651587291042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEIT_torch$main_fedavg.coverage" NAME="main_fedavg Coverage Results" MODIFIED="1651568875612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEIT_torch$MNIST.coverage" NAME="MNIST Coverage Results" MODIFIED="1651501474889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset" />
     <SUITE FILE_PATH="coverage/WEIT_torch$test.coverage" NAME="test Coverage Results" MODIFIED="1651228460307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEIT_torch$main_WEIT.coverage" NAME="main_WEIT Coverage Results" MODIFIED="1651502403318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WEIT_torch$draw_image.coverage" NAME="draw_image Coverage Results" MODIFIED="1651571462363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEIT_torch$draw_image.coverage" NAME="draw_image Coverage Results" MODIFIED="1651595451365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEIT_torch$main_GEM.coverage" NAME="main_GEM Coverage Results" MODIFIED="1651565208779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WEIT_torch$main_fedrep.coverage" NAME="main-fedrep Coverage Results" MODIFIED="1651508260147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEIT_torch$main_fedrep.coverage" NAME="main-fedrep Coverage Results" MODIFIED="1651594956379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -534,16 +534,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1448">
-          <caret line="120" column="48" selection-start-line="120" selection-start-column="48" selection-end-line="120" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.conda/envs/taobao/Lib/site-packages/torch/utils/data/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
@@ -677,36 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main-fedrep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_WEIT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="185" column="45" selection-start-line="185" selection-start-column="45" selection-end-line="185" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main-apfl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/MNIST.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-577">
@@ -734,16 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="229" selection-start-line="229" selection-end-line="229" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Nets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="408" column="37" selection-start-line="408" selection-start-column="37" selection-end-line="408" selection-end-column="37" />
-          <folding>
-            <element signature="e#185#197#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,6 +751,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/save/cifar-json/run-cifar100_APFLcifar100_round15_frac0.4-tag-task_finish_and _agg.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="508">
+            <caret line="83" column="99" selection-start-line="83" selection-start-column="99" selection-end-line="83" selection-end-column="99" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_WEIT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="185" column="45" selection-start-line="185" selection-start-column="45" selection-end-line="185" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Nets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="405" column="8" selection-start-line="405" selection-start-column="8" selection-end-line="405" selection-end-column="8" />
+          <folding>
+            <element signature="e#185#197#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main-apfl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="23" column="144" selection-start-line="23" selection-start-column="144" selection-end-line="23" selection-end-column="144" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_fedavg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -813,31 +806,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/options.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="58" />
+        <state relative-caret-position="400">
+          <caret line="40" column="62" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/save/cifar-json/run-cifar100_APFLcifar100_round15_frac0.4-tag-task_finish_and _agg.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/main-fedrep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1371">
+          <caret line="120" column="48" selection-start-line="120" selection-start-column="48" selection-end-line="120" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/draw_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="50">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Experiment/cifar100.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Experiment/FC100.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Experiment/MNIST.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>

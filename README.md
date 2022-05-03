@@ -85,6 +85,7 @@ python main_WEIT.py --dataset [dataset] --model [mdoel] --num_users [num_users]
 - 遗忘率图像
 ##### 3.3.1 SVHN
 - 准确率图像
+     ![image](https://github.com/luopanyaxin/Federated-Continual-Learning/blob/main/Experiment/SVHN.png)
 - 遗忘率图像
 
 
