@@ -73,13 +73,15 @@ python main_WEIT.py --dataset [dataset] --model [mdoel] --num_users [num_users]
 #### 3.3 Experiment result 
 ##### 3.3.1 Cifar100
 - 准确率图像
-
+    ![image](https://github.com/luopanyaxin/Federated-Continual-Learning/blob/main/Experiment/cifar100.png)
 - 遗忘率图像
 ##### 3.3.1 FC100
 - 准确率图像
+    ![image](https://github.com/luopanyaxin/Federated-Continual-Learning/blob/main/Experiment/FC100.png)
 - 遗忘率图像
 ##### 3.3.1 MNIST
 - 准确率图像
+    ![image](https://github.com/luopanyaxin/Federated-Continual-Learning/blob/main/Experiment/MNIST.png)
 - 遗忘率图像
 ##### 3.3.1 SVHN
 - 准确率图像
