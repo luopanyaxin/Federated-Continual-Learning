@@ -47,10 +47,26 @@ python main_WEIT.py --dataset [dataset] --model [mdoel] --num_users [num_users]
 
 完整的参数信息解释在`utils/option.py`。
 ## 3 实验细节描述
-### 3.1 Experiment setting
-|Devices|Models and data|Baselines|
-|--|--|--|
-|<br>Windows <br>|6-layer CNN on CIFAR100<br>6-layer CNN on FC100<br>6-layer CNN on MNIST<br>ResNet18 on SVHN|GEM<br>Co2L<br>AGS-CL<br>FedAvg<br>APFL<br>FedRep
+### 3.1 实验设置
+**数据集:**
+- Cifar100: Cifar100共包含50000条训练数据和10000条测试数据，共100个类。在持续学习中，我将其分为10个任务，每个任务包含10类。
+- FC100: FC100共包含50000条训练数据和10000条测试数据，共100个类。在持续学习中，我将其分为10个任务，每个任务包含10类。
+- MNIST: MNIST数据集包含60000条训练数据和10000条测试数据，共10个类。在持续学习中，将这些数据按照随机序列进行重新排序生成5个任务，每个任务包括10类。
+- SVHN: SVHN数据集包含73257条训练数据和26032条测试数据，共10个类，为了使各个类的数据数量一致，在训练集中每个类选取4500个数据样本，在测试集中选取1500个测试样本。在持续学习中，将这些数据按照随机序列进行重新排序生成5个任务，每个任务包括10类。
+在联邦学习中，每个任务数据我们利用non-iid的方式分配给20个客户端。
+**模型:**
+- 6_layer CNN: 参考[AGS-CL](https://arxiv.org/abs/2003.13726)实现的模型，共包含6个卷积层和2个全连接层。
+- ResNet : 参考pytorch官方提供的resnet18进行的改动。
+**Baseline:**
+- GEM: 持续学习中的经典算法，通过存储部分样本后通过梯度的旋转来防止遗忘。
+- Co2L: 2021年提出的最新夫人持续学习算法，通过使用对比学习目标学习表征，再通过自监督蒸馏方式来保留表征方式来防止遗忘。
+- FedAvg: 联邦学习经典算法，将各个客户端的参数加权平均算法。
+- APFL: 个性化联邦学习算法，通过设定参数比例来权衡各个客户端模型参数聚合参数，防止数据异构导致的算法发散。
+- FedRep: 个性化联邦学习，划分每个模型参与全局聚合的层以及本地训练的层，之后通过冻结梯度的方式依次更新对应部分的层参数，防止数据异构导致的算法发散。
+**实验设置表：**
+    |Devices|Models and data|Baselines|
+    |--|--|--|
+    |<br>Windows <br>|6-layer CNN on CIFAR100<br>6-layer CNN on FC100<br>6-layer CNN on MNIST<br>ResNet18 on SVHN|GEM<br>Co2L<br>AGS-CL<br>FedAvg<br>APFL<br>FedRep
 
 ### 3.2 Experiment code
 - 6-layer CNN on Cifar100

@@ -122,61 +122,24 @@ def evaluate(model, data_loader, device):
 
     return acc
 
-# # data = MNISTTask('../data',task_num=5)
-# # train_dataset,test_dataset = data.getTaskDataSet()
-# # train_dataset = datasets.SVHN('../data/SVHN',split='train',download=False,transform=transforms.ToTensor())
-# # test_dataset = datasets.SVHN('../data/SVHN',split='test',transform=transforms.ToTensor())
-# # train_loader = torch.utils.data.DataLoader(train_dataset,
-# #                                            batch_size=128,
-# #                                            shuffle=True,
-# #                                            pin_memory=True,
-# #                                            num_workers=0)
-# #
-# # val_loader = torch.utils.data.DataLoader(test_dataset,
-# #                                          batch_size=64,
-# #                                          shuffle=False,
-# #                                          pin_memory=True,
-# #                                          num_workers=0)
-#
-# # net_glob = RepTail([3,32,32])
-# # net_glob.cuda()
-# # opt = torch.optim.Adam(net_glob.parameters(), 0.001)
-# # ce = torch.nn.CrossEntropyLoss()
-# # # print(net_glob.weight_keys)
-# # for epoch in range(100):
-# #     net_glob.train()
-# #     for x, y in train_loader:
-# #         x = x.cuda()
-# #         y = y.cuda()
-# #         out = net_glob(x,0,is_cifar=False)
-# #         loss = ce(out, y)
-# #         opt.zero_grad()
-# #         loss.backward()
-# #         opt.step()
-# #     if epoch % 1 == 0:
-# #         acc = evaluate(net_glob, val_loader, 'cuda:0')
-# #         print('The epochs:' + str(epoch) + '  the acc:' + str(acc))
-#
-# # transforms = transforms.Compose(
-# #
-# #             [   transforms.ToTensor(),
-# #                 transforms.Normalize(0.1307, 0.3081)]
-# #         )
-# net_glob = RepTail([1,28,28]).cuda()
-# # train_dataset = datasets.MNIST(root='../data',train=True,transform=transforms,download=False)
-# # test_dataset = datasets.MNIST(root='../data',train=False,transform=transforms,download=False)
-# train_loader = torch.utils.data.DataLoader(train_dataset[1],
+data = MNISTTask('../../data',task_num=5)
+train_dataset,test_dataset = data.getTaskDataSet()
+# train_dataset = datasets.SVHN('../data/SVHN',split='train',download=False,transform=transforms.ToTensor())
+# test_dataset = datasets.SVHN('../data/SVHN',split='test',transform=transforms.ToTensor())
+# train_loader = torch.utils.data.DataLoader(train_dataset,
 #                                            batch_size=128,
 #                                            shuffle=True,
 #                                            pin_memory=True,
 #                                            num_workers=0)
 #
-# val_loader = torch.utils.data.DataLoader(test_dataset[1],
+# val_loader = torch.utils.data.DataLoader(test_dataset,
 #                                          batch_size=64,
 #                                          shuffle=False,
 #                                          pin_memory=True,
 #                                          num_workers=0)
-#
+
+# net_glob = RepTail([3,32,32])
+# net_glob.cuda()
 # opt = torch.optim.Adam(net_glob.parameters(), 0.001)
 # ce = torch.nn.CrossEntropyLoss()
 # # print(net_glob.weight_keys)
@@ -184,7 +147,7 @@ def evaluate(model, data_loader, device):
 #     net_glob.train()
 #     for x, y in train_loader:
 #         x = x.cuda()
-#         y = y.cuda() - 10
+#         y = y.cuda()
 #         out = net_glob(x,0,is_cifar=False)
 #         loss = ce(out, y)
 #         opt.zero_grad()
@@ -193,5 +156,42 @@ def evaluate(model, data_loader, device):
 #     if epoch % 1 == 0:
 #         acc = evaluate(net_glob, val_loader, 'cuda:0')
 #         print('The epochs:' + str(epoch) + '  the acc:' + str(acc))
+
+# transforms = transforms.Compose(
+#
+#             [   transforms.ToTensor(),
+#                 transforms.Normalize(0.1307, 0.3081)]
+#         )
+net_glob = RepTail([1,28,28]).cuda()
+# train_dataset = datasets.MNIST(root='../data',train=True,transform=transforms,download=False)
+# test_dataset = datasets.MNIST(root='../data',train=False,transform=transforms,download=False)
+train_loader = torch.utils.data.DataLoader(train_dataset[1],
+                                           batch_size=128,
+                                           shuffle=True,
+                                           pin_memory=True,
+                                           num_workers=0)
+
+val_loader = torch.utils.data.DataLoader(test_dataset[1],
+                                         batch_size=64,
+                                         shuffle=False,
+                                         pin_memory=True,
+                                         num_workers=0)
+
+opt = torch.optim.Adam(net_glob.parameters(), 0.001)
+ce = torch.nn.CrossEntropyLoss()
+# print(net_glob.weight_keys)
+for epoch in range(100):
+    net_glob.train()
+    for x, y in train_loader:
+        x = x.cuda()
+        y = y.cuda() - 10
+        out = net_glob(x,0,is_cifar=False)
+        loss = ce(out, y)
+        opt.zero_grad()
+        loss.backward()
+        opt.step()
+    if epoch % 1 == 0:
+        acc = evaluate(net_glob, val_loader, 'cuda:0')
+        print('The epochs:' + str(epoch) + '  the acc:' + str(acc))
 
 
