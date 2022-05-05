@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38e95a73-85b7-4fd9-8db4-df3402219b8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-Co2L.py" beforeDir="false" afterPath="$PROJECT_DIR$/main-Co2L.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-apfl.py" beforeDir="false" afterPath="$PROJECT_DIR$/main-apfl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-fedrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/main-fedrep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_GEM.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_GEM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_WEIT.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_WEIT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_fedavg.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_fedavg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Nets.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/Nets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/train_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/train_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="38e95a73-85b7-4fd9-8db4-df3402219b8e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +14,7 @@
         <entry file="file://$PROJECT_DIR$/main_WEIT.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="325">
-              <caret line="61" column="31" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="61" selection-end-column="31" />
+              <caret line="61" column="31" selection-start-line="54" selection-start-column="4" selection-end-line="61" selection-end-column="31" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -69,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/train_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="125" column="54" selection-start-line="125" selection-start-column="54" selection-end-line="125" selection-end-column="54" />
+            <state relative-caret-position="4">
+              <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding>
                 <element signature="e#122#166#0" expanded="true" />
               </folding>
@@ -94,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/models/Nets.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2696">
-              <caret line="441" column="33" lean-forward="true" selection-start-line="441" selection-start-column="33" selection-end-line="441" selection-end-column="33" />
+              <caret line="441" column="33" selection-start-line="441" selection-start-column="33" selection-end-line="441" selection-end-column="33" />
               <folding>
                 <element signature="e#185#197#0" expanded="true" />
               </folding>
@@ -106,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/main-fedrep.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
-              <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -126,12 +115,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="264">
-                <caret line="89" column="109" selection-start-line="89" selection-start-column="109" selection-end-line="89" selection-end-column="109" />
+              <first_editor relative-caret-position="-11">
+                <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -189,7 +178,6 @@
         <option value="$PROJECT_DIR$/dataset/MNIST.py" />
         <option value="$PROJECT_DIR$/models/ResNetWEIT.py" />
         <option value="$PROJECT_DIR$/models/Nets.py" />
-        <option value="$PROJECT_DIR$/utils/train_utils.py" />
         <option value="$PROJECT_DIR$/main_WEIT.py" />
         <option value="$PROJECT_DIR$/utils/options.py" />
         <option value="$PROJECT_DIR$/main-apfl.py" />
@@ -198,10 +186,11 @@
         <option value="$PROJECT_DIR$/main-fedrep.py" />
         <option value="$PROJECT_DIR$/main-Co2L.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/utils/train_utils.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="739" />
     <option name="y" value="22" />
     <option name="width" value="1156" />
@@ -420,12 +409,12 @@
       <updated>1648694187714</updated>
       <workItem from="1648694188887" duration="1253000" />
       <workItem from="1651222307343" duration="4900000" />
-      <workItem from="1651471812574" duration="48920000" />
+      <workItem from="1651471812574" duration="49440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55073000" />
+    <option name="totallyTimeSpent" value="55593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -481,11 +470,6 @@
           <url>file://$PROJECT_DIR$/models/Nets.py</url>
           <line>279</line>
           <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/utils/train_utils.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/dataset/MNIST.py</url>
@@ -830,20 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/train_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="125" column="54" selection-start-line="125" selection-start-column="54" selection-end-line="125" selection-end-column="54" />
-          <folding>
-            <element signature="e#122#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Nets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2696">
-          <caret line="441" column="33" lean-forward="true" selection-start-line="441" selection-start-column="33" selection-end-line="441" selection-end-column="33" />
+          <caret line="441" column="33" selection-start-line="441" selection-start-column="33" selection-end-line="441" selection-end-column="33" />
           <folding>
             <element signature="e#185#197#0" expanded="true" />
           </folding>
@@ -860,7 +834,7 @@
     <entry file="file://$PROJECT_DIR$/main_WEIT.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
-          <caret line="61" column="31" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="61" selection-end-column="31" />
+          <caret line="61" column="31" selection-start-line="54" selection-start-column="4" selection-end-line="61" selection-end-column="31" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -900,7 +874,7 @@
     <entry file="file://$PROJECT_DIR$/main-fedrep.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
-          <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -920,10 +894,20 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="89" column="109" selection-start-line="89" selection-start-column="109" selection-end-line="89" selection-end-column="109" />
+          <first_editor relative-caret-position="-11">
+            <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/train_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+          <folding>
+            <element signature="e#122#166#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

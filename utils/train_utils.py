@@ -60,7 +60,7 @@ def get_data(args):
         dict_users_train, rand_set_all = noniid(dataset_train[0], args.num_users, args.shard_per_user, args.num_classes)
         dict_users_test, rand_set_all = noniid(dataset_test[0], args.num_users, args.shard_per_user, args.num_classes, rand_set_all=rand_set_all)
     elif args.dataset == 'SVHN':
-        svhn = SVHNTask('../data/SVHN',task_num=5)
+        svhn = SVHNTask('data/SVHN',task_num=5)
         # dataset_train = datasets.CIFAR100('data/cifar100', train=True, download=True, transform=trans_cifar100_train)
         # dataset_test = datasets.CIFAR100('data/cifar100', train=False, download=True, transform=trans_cifar100_val)
         dataset_train,dataset_test = svhn.getTaskDataSet()
