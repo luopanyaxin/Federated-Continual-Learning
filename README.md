@@ -67,9 +67,10 @@ python main_WEIT.py --dataset [dataset] --model [mdoel] --num_users [num_users]
 - FedRep: 个性化联邦学习，划分每个模型参与全局聚合的层以及本地训练的层，之后通过冻结梯度的方式依次更新对应部分的层参数，防止数据异构导致的算法发散。
 
 **实验设置表：**
-    |Devices|Models and data|Baselines|
-    |--|--|--|
-    |<br>Windows <br>|6-layer CNN on CIFAR100<br>6-layer CNN on FC100<br>6-layer CNN on MNIST<br>ResNet18 on SVHN|GEM<br>Co2L<br>AGS-CL<br>FedAvg<br>APFL<br>FedRep
+
+|Devices|Models and data|Baselines|
+|--|--|--|
+|<br>Windows <br>|6-layer CNN on CIFAR100<br>6-layer CNN on FC100<br>6-layer CNN on MNIST<br>ResNet18 on SVHN|GEM<br>Co2L<br>AGS-CL<br>FedAvg<br>APFL<br>FedRep
 
 ### 3.2 Experiment code
 - 6-layer CNN on Cifar100
