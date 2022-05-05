@@ -11,7 +11,7 @@ from utils.train_utils import get_data, get_model, read_data
 from models.Update import LocalUpdate,DatasetSplit
 from models.test import test_img_local_all, test_img_local_all_WEIT
 from LongLifeMethod.WEIT import Appr,LongLifeTest,LongLifeTrain
-from models.Nets import RepTail,Cifar100WEIT
+from models.Nets import RepTail,Cifar100WEIT,WEITResNet
 from torch.utils.data import DataLoader
 import time
 
@@ -52,7 +52,14 @@ if __name__ == '__main__':
     write = SummaryWriter('./log/WEIT' + args.dataset+'_'+'round' + str(args.round) + '_frac' + str(args.frac))
     # build model
     # net_glob = get_model(args)
-    net_glob = Cifar100WEIT([1,28,28])
+    if args.dataset =='mnist':
+        ss = [1,28,28]
+    else:
+        ss = [3,32,32]
+    if args.model =='6_layer_CNN':
+        net_glob = Cifar100WEIT(ss)
+    else:
+        net_glob = WEITResNet()
     net_glob.train()
     if args.load_fed != 'n':
         fed_model_path = './save/' + args.load_fed + '.pt'

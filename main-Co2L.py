@@ -11,7 +11,7 @@ from utils.train_utils import get_data, get_model, read_data
 from models.Update import LocalUpdate,DatasetSplit
 from models.test import test_img_local_all
 from LongLifeMethod.Co2L import Appr,LongLifeTrain
-from models.Nets import RepTailResNet18
+from models.Nets import RepTailResNet18, RepTail
 from torch.utils.data import DataLoader
 import time
 if __name__ == '__main__':
@@ -46,7 +46,14 @@ if __name__ == '__main__':
     print(args.alg)
     # build model
     # net_glob = get_model(args)
-    net_glob = RepTailResNet18()
+    if args.dataset == 'mnist':
+        ss = [1, 28, 28]
+    else:
+        ss = [3, 32, 32]
+    if args.model == '6_layer_CNN':
+        net_glob = RepTail(ss)
+    else:
+        net_glob = RepTailResNet18()
     net_glob.train()
     if args.load_fed != 'n':
         fed_model_path = './save/' + args.load_fed + '.pt'

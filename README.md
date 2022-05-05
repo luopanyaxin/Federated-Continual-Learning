@@ -75,19 +75,19 @@ python main_WEIT.py --dataset [dataset] --model [mdoel] --num_users [num_users]
 ### 3.2 Experiment code
 - 6-layer CNN on Cifar100
 	```shell
-	python main_WEIT.py --epochs=150 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layerCNN --dataset=cifar100 --num_classes=100 --task=10 lr=0.001
+	python main_WEIT.py --epochs=150 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layer_CNN --dataset=cifar100 --num_classes=100 --task=10 lr=0.001
 	```
 - 6-layer CNN on FC100
 	```shell
-	python main_WEIT.py --epochs=150 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layerCNN --dataset=FC100 --num_classes=100 --task=10 lr=0.001
+	python main_WEIT.py --epochs=150 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layer_CNN --dataset=FC100 --num_classes=100 --task=10 lr=0.001
 	```
 - 6-layer CNN on MNIST
 	```shell
-	python main_WEIT.py --epochs=75 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layerCNN --dataset=mnist --num_classes=100 --task=5 lr=0.001
+	python main_WEIT.py --epochs=75 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layer_CNN --dataset=mnist --num_classes=100 --task=5 lr=0.001
 	```
 - ResNet18 on SVHN
 	```shell
-	python main_WEIT.py --epochs=75 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layerCNN --dataset=SVHN --num_classes=100 --task=5 lr=0.001
+	python main_WEIT.py --epochs=75 --round=15 --num_users=20 --frac=0.4 shard_per_user=5 per--model=6_layer_CNN --dataset=SVHN --num_classes=100 --task=5 lr=0.001
 	```
 
 #### 3.3 Experiment result 

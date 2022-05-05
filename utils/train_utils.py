@@ -118,7 +118,7 @@ def read_data(train_data_dir, test_data_dir):
 
 
 def get_model(args):
-    if args.model == 'cnn' and 'cifar100' in args.dataset:
+    if args.model == 'cnn':
         net_glob = CNNCifar100(args=args).to(args.device)
     elif args.model == 'cnn' and 'cifar10' in args.dataset:
         net_glob = CNNCifar(args=args).to(args.device)

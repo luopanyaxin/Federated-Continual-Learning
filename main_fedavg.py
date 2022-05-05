@@ -48,7 +48,14 @@ if __name__ == '__main__':
     write = SummaryWriter('./log/Baseline_' + args.dataset+'_'+'round' + str(args.round) + '_frac' + str(args.frac))
     # build model
     # net_glob = get_model(args)
-    net_glob = RepTailResNet18()
+    if args.dataset =='mnist':
+        ss = [1,28,28]
+    else:
+        ss = [3,32,32]
+    if args.model =='6_layer_CNN':
+        net_glob = RepTail(ss)
+    else:
+        net_glob = RepTailResNet18()
     net_glob.train()
     if args.load_fed != 'n':
         fed_model_path = './save/' + args.load_fed + '.pt'
